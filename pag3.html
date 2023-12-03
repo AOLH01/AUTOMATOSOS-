@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Automatas II</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <title>Analizador Léxico</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/bikes">Automatosos II</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Analizador Semántico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sintactico">Analizador Sintáctico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/lexico">Analizador Léxico</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <!-- Sección de contenido para el analizador lexico -->
+    <div class="content">
+      <h1>Analizador Léxico</h1>
+      <!-- Formulario para el analizador Léxico -->
+      <div class="form-container">
+      <form method="post">
+        <!-- Creación del Textarea para que ingrese el texto el usuario -->
+        <div class="form-group">
+          <label for="lexicalInput">Texto para Analizar:</label>
+          <textarea class="form-control" id="lexicalInput" name="lexicalInput" rows="4"></textarea>
+        </div>
+        <!-- Butón para el analisis -->
+        <input type="submit" class="btn btn-primary" id="exampleInputSubmit" value="Analizar">
+      </form>
+        {% if expresion %}
+            <div class="result-container">
+                <p class="mb-1"><strong>Expresión:</strong> {{ expresion }}</p>
+            </div>
+        {% endif %}
+        {% if caracteres_no_reconocidos %}
+            <div class="error-container">
+                <p style="color: red;" class="mb-1"><strong>Error de sintaxis. Caracteres no reconocidos:</strong> {{ caracteres_no_reconocidos }}</p>
+            </div>
+        {% endif %}
+    </div>
+    </div>
+  </div>
+
+ <!-- Dependencias de Bootstrap y Javascrip -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-JBGCtSHUpv5K1aGFc0deK9fyA8l0/QpibKqqv2A7hOmZApQ/9JlfaO5/D8QH86fP"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JmK8UqoIZlCm+a6j7V4XrJSKkGlcAua8SIcuto9Uq87A/2z6VrDZ4u5c4p+2G8W5"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
